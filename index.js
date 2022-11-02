@@ -41,9 +41,7 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 
  function copyToClipboardPassword1(){
     let copiedText1 = passwordOneEl;
-    let copiedText2 = passwordTwoEl;
     navigator.clipboard.writeText(copiedText1.textContent);
-    navigator.clipboard.writeText(copiedText2.textContent);
     document.getElementById('copied1').style.display = "block";
     
     // alert("Copied to Clipboard");
