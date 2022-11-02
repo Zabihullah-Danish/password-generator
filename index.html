@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./dist/output.css" rel="stylesheet" />
+    <title>Password Generator</title>
+</head>
+<body>
+        <div class="max-w-4xl mt-20 border rounded-lg bg-gray-900 mx-auto text-white
+            p-4 sm:p-10 flex flex-col space-y-2
+        ">
+            <h1 class="text-4xl font-bold text-gray-200">Generator a</h1>
+            <h1 class="text-4xl font-bold text-green-600 ">random password</h1>
+            <p class="font-sans text-gray-300">Never user an insecure password again.</p>
+            <h1 class="text-green-500 text-2xl font-bold font-sans py-3 hidden">Select password complexity</h1>
+            <div style="display: none;" class="flex flex-col space-y-2 sm:flex sm:flex-row sm:space-y-0 sm:space-x-1 md:space-x-2 py-5">
+                
+                <div class="bg-green-500/20 p-1 rounded-md sm:w-max">
+                    <input name="passwordTypes" id="strings" type="radio" value="strings">
+                    <!-- <button id="strings" onclick="passwordTypes()">Strings</button> -->
+                    <label class="" for="strings">Strings</label>
+                </div>
+                <div class="bg-green-500/20 p-1 rounded-md sm:w-max">
+                    <input name="passwordTypes" id="numbers" type="radio" value="numbers">
+                    <!-- <button id="numbers" onclick="passwordTypes()">Numbers</button> -->
+                    <label for="numbers">Numbers</label>
+                </div>
+                <div class="bg-green-500/20 p-1 rounded-md sm:w-max">
+                    <input name="passwordTypes" id="stringNumber" type="radio" value="1">
+                    <label for="stringNumber">Strings + Numbers</label>
+                </div>
+                <div class="bg-green-500/20 p-1 rounded-md sm:w-max">
+                    <input name="passwordTypes" id="stringSpecialChar" type="radio" value="1">
+                    <label for="stringSpecialChar">Strings + SpecialChars</label>
+                </div>
+                <div class="bg-green-500/20 p-1 rounded-md sm:w-max">
+                    <input name="passwordTypes" id="stringNumberSpecialChar" type="radio" value="1">
+                    <label for="stringNumberSpecialChar">Strings + Numbers + SpecialChars</label>
+                </div>
+                
+                
+                
+            </div>
+            <div class="py-10 border-b border-gray-500">
+                <button onclick="getPassword()" class="bg-green-500
+                 focus:outline-none
+                 w-full sm:w-[30%]
+                 hover:bg-green-500/80 transform text-gray-100 p-2 rounded-md">Generate passwords</button>
+            </div>
+            <div class="space-y-3 sm:flex sm:flex-row sm:justify-between sm:space-y-0 sm:p-10 w-auto">
+                <div class="flex">
+                    
+                    <p id="password1" class="w-full sm:w-60 sm:h-8 rounded-md bg-gray-800 text-green-400 text-center"></p>
+                    <button onclick="copyToClipboardPassword1()"  title="Copied">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon w-6 -ml-6 text-gray-300" viewBox="0 0 512 512"><title>Copy</title><path d="M336 64h32a48 48 0 0148 48v320a48 48 0 01-48 48H144a48 48 0 01-48-48V112a48 48 0 0148-48h32" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><rect x="176" y="32" width="160" height="64" rx="26.13" ry="26.13" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+                    </button>
+                    <span id="copied1" style="display: none;" class="text-xs p-2 text-gray-300">Copied</span>
+                </div>
+                <div class="flex">
+                    <p id="password2" class="w-full sm:w-60 sm:h-8 rounded-md bg-gray-800 text-green-400 text-center"></p>
+                    <button onclick="copyToClipboardPassword2()">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon w-6 -ml-6 text-gray-300" viewBox="0 0 512 512"><title>Copy</title><path d="M336 64h32a48 48 0 0148 48v320a48 48 0 01-48 48H144a48 48 0 01-48-48V112a48 48 0 0148-48h32" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><rect x="176" y="32" width="160" height="64" rx="26.13" ry="26.13" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/></svg>
+                    </button>
+                    <span id="copied2" style="display: none;" class="text-xs p-2 text-gray-300">Copied</span>
+                </div>
+                
+            </div>
+            <div class="mx-auto border border-gray-500 rounded-md p-2 shadow-sm shadow-gray-200 m-10 w-full text-center">
+                Developed by: Zabihullah Danish
+            </div>
+            
+        </div>
+        
+        <script src="index.js"></script>
+</body>
+</html>
